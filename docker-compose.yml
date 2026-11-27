@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  upi-toolkit:
+    build: .
+    container_name: upi-payment-toolkit
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upi-payment-toolkit"
+version = "1.0.0"
+authors = [
+  { name="Sumal Dev Services", email="sumaldevservices-alt@users.noreply.github.com" },
+]
+description = "High-performance Python toolkit & microservice for dynamic NPCI UPI QR generation, app intent links, and UTR validation."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Point-Of-Sale",
+]
+dependencies = [
+    "fastapi>=0.110.0",
+    "pydantic>=2.0.0",
+    "qrcode[pil]>=7.4.2",
+    "pillow>=10.0.0",
+]
+
+[project.scripts]
+upi-cli = "upi_toolkit.cli:main"
